@@ -54,6 +54,19 @@ class MyFrame4 : public wxFrame
 		wxButton* Equal;
 		wxButton* Add;
 
+		// Virtual event handlers, override them in your derived class
+		virtual void push_7( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_8( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_9( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_4( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_5( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_6( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_1( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_2( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_3( wxCommandEvent& event ) { event.Skip(); }
+		virtual void push_0( wxCommandEvent& event ) { event.Skip(); }
+
+
 	public:
 
 		MyFrame4( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 326,472 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );

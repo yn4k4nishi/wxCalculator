@@ -5,7 +5,7 @@
 // PLEASE DO *NOT* EDIT THIS FILE!
 ///////////////////////////////////////////////////////////////////////////
 
-#include "noname.h"
+#include "calculator.h"
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -105,8 +105,32 @@ MyFrame4::MyFrame4( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	NUM7->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_7 ), NULL, this );
+	NUM8->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_8 ), NULL, this );
+	NUM9->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_9 ), NULL, this );
+	NUM4->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_4 ), NULL, this );
+	NUM5->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_5 ), NULL, this );
+	NUM6->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_6 ), NULL, this );
+	NUM1->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_1 ), NULL, this );
+	NUM2->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_2 ), NULL, this );
+	NUM3->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_3 ), NULL, this );
+	NUM0->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_0 ), NULL, this );
 }
 
 MyFrame4::~MyFrame4()
 {
+	// Disconnect Events
+	NUM7->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_7 ), NULL, this );
+	NUM8->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_8 ), NULL, this );
+	NUM9->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_9 ), NULL, this );
+	NUM4->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_4 ), NULL, this );
+	NUM5->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_5 ), NULL, this );
+	NUM6->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_6 ), NULL, this );
+	NUM1->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_1 ), NULL, this );
+	NUM2->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_2 ), NULL, this );
+	NUM3->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_3 ), NULL, this );
+	NUM0->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame4::push_0 ), NULL, this );
+
 }
