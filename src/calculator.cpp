@@ -26,7 +26,7 @@ MyFrame4::MyFrame4( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	sbSizer6->Add( m_textCtrl2, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALL, 5 );
 
 
-	fgSizer3->Add( sbSizer6, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL, 5 );
+	fgSizer3->Add( sbSizer6, 0, wxALIGN_CENTER_HORIZONTAL, 5 );
 
 	wxStaticBoxSizer* sbSizer8;
 	sbSizer8 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxT("label") ), wxHORIZONTAL );
@@ -38,7 +38,7 @@ MyFrame4::MyFrame4( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	sbSizer8->Add( m_button44, 0, wxALL, 5 );
 
 
-	fgSizer3->Add( sbSizer8, 1, wxALL|wxEXPAND, 5 );
+	fgSizer3->Add( sbSizer8, 1, wxALIGN_RIGHT|wxRIGHT, 5 );
 
 	wxStaticBoxSizer* sbSizer9;
 	sbSizer9 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxT("label") ), wxVERTICAL );

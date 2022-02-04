@@ -1,7 +1,9 @@
 #include "wx-3.1/wx/wxprec.h"
 #include "wx-3.1/wx/wx.h"
+#include "wx/debug.h"
 
 #include "calculator.h"
+
 
 class MyApp : public wxApp {
 public:
@@ -9,7 +11,9 @@ public:
 };
 
 bool MyApp::OnInit(){
-    MyFrame4 *frame = new MyFrame4(NULL, wxID_ANY, "Hello world");
+    wxDisableAsserts();
+
+    MyFrame4 *frame = new MyFrame4(NULL, wxID_ANY, "Calculator");
     frame->Show(true);
     return true;
 }
